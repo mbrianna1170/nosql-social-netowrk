@@ -12,7 +12,6 @@ app.use(require('./routes'));
 
 // connect mongoose 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/nosql-social-network', {
-    useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

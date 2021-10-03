@@ -12,13 +12,13 @@ const UserSchema = new Schema({
         type: String,
         unique: true,
         required: true
-    },
-    thoughts: {
-
-    },
-    friends: {
-
     }
+    // // thoughts: {
+
+    // // },
+    // // friends: {
+
+    // }
 });
 
 // create the User model using the UserSchema 
