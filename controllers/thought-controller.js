@@ -11,6 +11,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
+
   // get one thought by id
   getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.thoughtId })
@@ -27,6 +28,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
+
   // create a thought and add to user
   addThought({ params, body }, res) {
     Thought.create(body)
@@ -45,6 +47,23 @@ const thoughtController = {
         res.json(dbUserData);
       })
       .catch((err) => res.json(err));
+  },
+
+  // add reaction to thoughts
+  addReaction({ params, body }, res) {
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $push: { reactions: body } },
+      { new: true }
+    )
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          res.status(404).json({ message: "No user found with this id!" });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch((err) => res.status(500).json(err));
   },
 
   // update thought by id
@@ -92,23 +111,8 @@ const thoughtController = {
       })
       .catch((err) => res.json(err));
   },
-  // add reaction to thoughts (checked)
-  addReaction({ params, body }, res) {
-    Thought.findOneAndUpdate(
-      { _id: params.thoughtId },
-      { $push: { reactions: body } },
-      { new: true }
-    )
-      .then((dbUserData) => {
-        if (!dbUserData) {
-          res.status(404).json({ message: "No user found with this id!" });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch((err) => res.status(500).json(err));
-  },
-  // delete a reaction off of thoughts (checked)
+
+  // delete a reaction off of thoughts
   removeReaction({ params }, res) {
     Thought.findOneAndUpdate(
       { _id: params.commentId },
