@@ -19,4 +19,6 @@ git clone repo > npm install > npm start
 
 ## Walkthrough: 
 
-<a href="https://drive.google.com/file/d/1GWc6YWS868olN7pswrg0pQxakOjp4j2B/view">Video 1</a> User Routes: GET all users, GET users by id, UPDATE user by id, DELETE user by id.
+<a href="https://drive.google.com/file/d/1GWc6YWS868olN7pswrg0pQxakOjp4j2B/view">Video 1</a> User Routes:  CREATE user, GET all users, GET users by id, UPDATE user by id, DELETE user by id.
+
+<a href="https://drive.google.com/file/d/1lWuEr4NxRMsJK9-leUqKOtZ5FM0McSXs/view">Video 2</a> Thought Routes: CREATE thoughts, GET all thoughts, UPDATE thought by thought id, DELETE thoughts by user id and thought id. 
