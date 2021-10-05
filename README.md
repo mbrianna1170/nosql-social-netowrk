@@ -18,3 +18,7 @@ Back-end application that uses mongoose with MongoDB. With this application you 
 git clone repo > npm install > npm start
 
 ## Walkthrough: 
+
+- Video 1: User Routes: GET all users, GET user by id, UPDATE user by id, DELETE user by id.
+
+<video src="assets\videos\Untitled_ Oct 5, 2021 12_23 PM.webm">
