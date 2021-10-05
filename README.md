@@ -19,5 +19,4 @@ git clone repo > npm install > npm start
 
 ## Walkthrough: 
 
-- Video 1: User Routes: GET all users, GET user by id, UPDATE user by id, DELETE user by id.
-<iframe src="https://drive.google.com/file/d/1GWc6YWS868olN7pswrg0pQxakOjp4j2B/preview" width="640" height="480"></iframe>
+<a href="https://drive.google.com/file/d/1GWc6YWS868olN7pswrg0pQxakOjp4j2B/view">Video 1</a> User Routes: GET all users, GET users by id, UPDATE user by id, DELETE user by id.
